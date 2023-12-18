@@ -18,9 +18,9 @@ print(response_token.json())
 # Запрос для создания нового набора.
 def post_new_client_kit(kit_body, auth_token):
     url = configuration.BASE_URL + configuration.CREATE_KITS
-    return requests.post(url,json=kit_body, headers=auth_token)
+    return requests.post(url, json=kit_body, headers=auth_token)
 
 
 response = post_new_client_kit(data.CREATE_KIT, data.AUTH_TOKEN)
 print(response.status_code)
-print(response.json())1
+print(response.json())
